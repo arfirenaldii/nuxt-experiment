@@ -1,0 +1,187 @@
+/** Typography */
+
+@mixin typography-h1-mobile {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.003em;
+}
+
+@mixin typography-h2-mobile {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.001em;
+}
+
+@mixin typography-h3-mobile {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+@mixin typography-h4-mobile {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@mixin typography-h5-mobile {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+@mixin typography-h6-mobile {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin typography-p-mobile {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@mixin typography-body-lg-mobile {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@mixin typography-body-md-mobile {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+@mixin typography-body-sm-mobile {
+    font-size: 8px;
+    line-height: 10px;
+}
+
+@mixin typography-h1-desktop {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.003em;
+}
+
+@mixin typography-h2-desktop {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.003em;
+}
+
+@mixin typography-h3-desktop {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+@mixin typography-h4-desktop {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin typography-h5-desktop {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@mixin typography-h6-desktop {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@mixin typography-p-desktop {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin typography-body-lg-desktop {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin typography-body-md-desktop {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@mixin typography-body-sm-desktop {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+@mixin loading($fg-color: rgba(white, .2), $sweep-bg: '', $animation-duration: 1.5s) {
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        @apply tw-block tw-absolute;
+        @apply tw-w-full tw-h-full;
+        @apply -tw-translate-x-full;
+        @apply tw-top-0 tw-left-0;
+
+        content: '';
+
+        @if ($sweep-bg =='') {
+            background: linear-gradient(90deg, transparent, $fg-color, transparent);
+        }
+
+        @else {
+            background: $sweep-bg;
+        }
+
+        animation: loading $animation-duration infinite;
+    }
+}
+
+/** Add ellipsis style */
+@mixin ellipsis($count: 1) {
+    overflow: hidden;
+
+    @if ($count > 1) {
+        display: -webkit-box;
+        -webkit-line-clamp: $count;
+        -webkit-box-orient: vertical;
+    }
+
+    @else {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@mixin add-body-container-width {
+    /** For application and content styling */
+
+    width: 100%;
+    max-width: 480px;
+
+    @media (min-width: $min-xs) {
+        max-width: 360px;
+    }
+
+    @media (min-width: $min-lg) {
+        max-width: initial;
+    }
+}
+
+
+@mixin inject-fade-transition ($duration: 0.2s) {
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity $duration ease;
+    }
+
+    .fade-leave-active {
+        position: absolute;
+        width: 100%;
+    }
+
+    .fade-enter,
+    .fade-leave-active {
+        opacity: 0;
+    }
+}
+
+@mixin p-footer {
+    padding-bottom: 80px;
+
+    @media (min-width: $min-lg) {
+        padding-bottom: 120px;
+    }
+}

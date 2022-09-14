@@ -1,0 +1,96 @@
+// NOTE: These colors are not fixed.
+
+$blue-10: #E6F5FF;
+$blue-100: #60D4FF;
+$blue-200: #02BBFF;
+$blue-300: #2DAFFD;
+$blue-400: #029FFD;
+$blue-500: #0065C1;
+$blue-600: #00519C;
+$blue-10p: rgba(2, 159, 253, 0.1);
+
+$neutrals-0: #FFFFFF;
+$neutrals-10: #FCFCFC;
+$neutrals-20: #F5F5F5;
+$neutrals-30: #D9D9D9;
+$neutrals-40: #BFBFBF;
+$neutrals-100: #758592;
+$neutrals-200: #556978;
+$neutrals-300: #465A69;
+$neutrals-400: #384753;
+$neutrals-500: #152430;
+$neutrals-600: #0B131A;
+$neutrals-10p: rgba(56, 71, 83, 0.1);
+
+$red-10: #FCEDED;
+$red-100: #F3B3B3;
+$red-200: #FF8C8C;
+$red-300: #FF5C5C;
+$red-400: #FF2424;
+$red-500: #C10000;
+$red-600: #9C1616;
+$red-10p: rgba(255, 36, 36, 0.1);
+
+$yellow-10: #FFF4E9;
+$yellow-100: #FFE89A;
+$yellow-200: #FFDF70;
+$yellow-300: #FFD56A;
+$yellow-400: #FCCB4E;
+$yellow-500: #E4AF26;
+$yellow-600: #937A39;
+$yellow-10p: rgba(255, 199, 9, 0.1);
+
+$green-10: #EBF7E6;
+$green-100: #97F5B7;
+$green-200: #78EFA0;
+$green-300: #55EC88;
+$green-400: #2ECA63;
+$green-500: #1FA94E;
+$green-600: #167B38;
+$green-10p: rgba(61, 217, 114, 0.1);
+
+$purple-100: #B6B1E0;
+$purple-200: #9891D3;
+$purple-300: #6C61C0;
+$purple-400: #4E41B3;
+$purple-500: #372E7D;
+$purple-600: #30286D;
+$purple-10p: #EDECF7;
+
+$fuchsia-100: #EF9AC9;
+$fuchsia-200: #E970B2;
+$fuchsia-300: #DF3291;
+$fuchsia-400: #D9087B;
+$fuchsia-500: #980656;
+$fuchsia-600: #84054B;
+$fuchsia-10p: #FBE6F2;
+
+// Shadows
+
+$shadow-none: none;
+$shadow-5p: 0px 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-10p: 0px 4px 16px rgba(0, 0, 0, 0.1);
+$shadow-15p: 0px 4px 28px rgba(0, 0, 0, 0.15);
+$shadow-20p: 0px 8px 40px rgba(0, 0, 0, 0.2);
+$shadow-25p: 0px 12px 64px rgba(0, 0, 0, 0.25);
+
+// breakpoint prefix source from https://tailwindcss.com/docs/responsive-design#overview
+
+$min-xs: 480px;
+$min-sm: 640px;
+$min-md: 768px;
+$min-lg: 1024px;
+$min-xl: 1280px;
+$min-2xl: 1356px;
+
+// Commenting this out to encourage mobile-first design
+
+// $max-sm: $min-sm - 0.01px;
+// $max-md: $min-sm - 0.01px;
+// $max-lg: $min-sm - 0.01px;
+// $max-xl: $min-sm - 0.01px;
+// $max-2xl: $min-sm - 0.01px;
+
+$content-container-pad-x: 16px;
+$content-container-max-w-desktop: 1140px;
+$body-container-max-w-mobile: 360px;

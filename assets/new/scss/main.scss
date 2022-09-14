@@ -1,0 +1,127 @@
+/** For application and content styling */
+
+@import './mixins.scss';
+
+.shining-loading {
+    @include loading($fg-color: rgba(white, 0.6));
+}
+
+.body-container {
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media (min-width: 480px) {
+        max-width: 360px;
+    }
+
+    @media (min-width: $min-lg) {
+        max-width: initial;
+    }
+}
+
+.fixed-body-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    left: 0;
+
+    @media (min-width: 480px) {
+        width: 360px;
+        left: calc((100vw - 360px - var(--scrollbar-width)) / 2);
+    }
+
+    @media (min-width: $min-lg) {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.content-container {
+    width: calc(100% - $content-container-pad-x * 2);
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $min-lg) {
+        max-width: $content-container-max-w-desktop;
+    }
+}
+
+#home-main-product {
+    .highlight-active {
+        @apply tw-p-2;
+
+        background: #FFFFFF !important;
+        border-radius: 12px;
+        z-index: 1001;
+
+
+        @media (min-width: $min-lg) {
+            @apply tw-p-4;
+        }
+    }
+}
+
+.padding-before-footer {
+    @include p-footer;
+}
+
+.hide-scrollbar-x {
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: none;
+        border-radius: 0px;
+    }
+
+    @media screen and (min-width: $min-lg) {
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 0;
+            // display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgb(148, 144, 144);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: grey;
+            border-radius: 10px;
+        }
+    }
+}
+
+.program-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+
+    &>* {
+        width: 100%;
+        min-width: initial;
+    }
+
+    @media screen and (min-width: $min-lg) {
+        grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+    }
+}
