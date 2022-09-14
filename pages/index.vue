@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Hello World</p>
+    <HomeBanner />
     <home-advantage />
   </div>
 </template>

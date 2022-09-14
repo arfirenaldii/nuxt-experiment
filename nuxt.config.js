@@ -21,6 +21,7 @@ export default {
     '~/assets/css/main.css',
     '~/assets/new/scss/main.scss',
     // '~/assets/css/main.scss'
+    'hooper/dist/hooper.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -36,7 +37,8 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
     '@nuxt/postcss8',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@vueuse/nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
